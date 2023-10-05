@@ -1,0 +1,1 @@
+cmd_headers/include/linux/spi/.install := /bin/bash ../scripts/headers_install.sh headers/include/linux/spi ../include/uapi/linux/spi spidev.h; /bin/bash ../scripts/headers_install.sh headers/include/linux/spi ./include/generated/uapi/linux/spi ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > headers/include/linux/spi/$$F; done; touch headers/include/linux/spi/.install
